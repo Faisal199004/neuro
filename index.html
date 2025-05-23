@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة تعليمية متخصصة في علم الأعصاب للأطباء">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NeuroLearn Hub | الصفحة الرئيسية</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><a href="index.html"><img src="images/logo.png" alt="شعار NeuroLearn Hub" style="height:40px; vertical-align:middle; margin-left:10px;">NeuroLearn Hub</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">الرئيسية</a></li>
+                    <li><a href="articles.html">المقالات</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">اشتراك</a></li>
+                    <!-- إذا كان المستخدم مسجل الدخول، أظهر روابط الملف الشخصي/لوحة التحكم -->
+                    <!-- <li><a href="profile.html">ملفي الشخصي</a></li> -->
+                    <!-- <li><a href="author-dashboard.html">لوحة تحكم المؤلف</a></li> -->
+                    <!-- <li><a href="admin-panel.html">لوحة المشرف</a></li> -->
+                    <!-- <li><a href="logout.html">تسجيل الخروج</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="container search-container">
+            <h1>المنصة التعليمية الشاملة لعلم الأعصاب</h1>
+            <p>مصدرك الموثوق للتخصصات الفرعية في علم الأعصاب، تقارير الحالات، المراجعات العلمية، والمزيد.</p>
+            <form id="search-form-main" action="articles.html" method="get" class="search-form">
+                <label for="search-main" class="sr-only">بحث في المقالات</label>
+                <input type="search" id="search-main" name="query" placeholder="ابحث في المقالات...">
+                <button type="submit">بحث</button>
+            </form>
+        </section>
+
+        <section id="featured-categories" class="container">
+            <h2>تصفح حسب التخصص الفرعي</h2>
+            <div class="specialty-list">
+                <div class="specialty-item">
+                    <a href="articles.html?category=vascular-neurology">أمراض الأوعية الدموية العصبية</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=epilepsy">الصرع</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=clinical-neurophysiology">الفيزيولوجيا العصبية السريرية</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=neurocritical-care">العناية المركزة العصبية</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=neuroimmunology">أمراض المناعة العصبية</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=multiple-sclerosis">التصلب المتعدد</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=movement-disorders">اضطرابات الحركة</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=neuromuscular-medicine">طب الأعصاب والعضلات</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=behavioral-neurology">علم الأعصاب السلوكي</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=neuropsychiatry">الطب النفسي العصبي</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=headache-medicine">طب الصداع</a>
+                </div>
+                <div class="specialty-item">
+                    <a href="articles.html?category=neuro-oncology">علم الأورام العصبية</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscription-box" class="container subscription-box">
+            <h3>اشترك للوصول إلى محتوى حصري</h3>
+            <p>احصل على آخر المستجدات في مجال علم الأعصاب وتصفح المقالات الحصرية.</p>
+            <a href="register.html" class="button">اشترك الآن</a>
+        </section>
+
+        <section id="latest-articles" class="container">
+            <h2>أحدث المقالات</h2>
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=1">فهم السكتة الدماغية الإقفارية: مراجعة شاملة</a></h3>
+                <p class="article-meta">بواسطة د. سارة أحمد | تاريخ النشر: 2024-05-20 | التخصص: أمراض الأوعية الدموية العصبية</p>
+                <p>ملخص موجز لمحتوى المقالة، يناقش أسباب وتشخيص وعلاج السكتة الدماغية الإقفارية...</p>
+                <a href="article-detail.html?id=1" class="button">قراءة المزيد</a>
+            </div>
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=2">العلاجات الجديدة في التصلب المتعدد</a></h3>
+                <p class="article-meta">بواسطة د. محمد خالد | تاريخ النشر: 2024-05-19 | التخصص: التصلب المتعدد</p>
+                <p>استكشاف أحدث التطورات في الخيارات العلاجية للمرضى المصابين بالتصلب المتعدد...</p>
+                <a href="article-detail.html?id=2" class="button">قراءة المزيد</a>
+            </div>
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=3">إدارة حالة الصرع المستمرة</a></h3>
+                <p class="article-meta">بواسطة د. ليلى عمر | تاريخ النشر: 2024-05-18 | التخصص: الصرع</p>
+                <p>إرشادات وبروتوكولات للإدارة العاجلة لحالة الصرع المستمرة لدى البالغين والأطفال...</p>
+                <a href="article-detail.html?id=3" class="button">قراءة المزيد</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>NeuroLearn Hub © 2024. لأغراض تعليمية فقط.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

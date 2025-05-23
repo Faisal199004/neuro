@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="لوحة المشرف لـ NeuroLearn Hub.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>لوحة المشرف | NeuroLearn Hub</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><a href="index.html"><img src="images/logo.png" alt="شعار NeuroLearn Hub" style="height:40px; vertical-align:middle; margin-left:10px;">NeuroLearn Hub</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">عرض الموقع</a></li>
+                    <li class="current"><a href="admin-panel.html">لوحة المشرف</a></li>
+                    <li><a href="profile.html">ملفي الشخصي</a></li>
+                    <li><a href="#">تسجيل الخروج</a></li> <!-- مكان لتسجيل الخروج -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>لوحة المشرف</h1>
+
+        <section id="admin-dashboard-nav" style="margin-bottom:30px;" class="admin-actions">
+            <!-- يمكن أن تكون علامات تبويب أو روابط -->
+            <a href="#pending-articles" class="button">المقالات قيد الانتظار</a>
+            <a href="#manage-users" class="button">إدارة المستخدمين</a>
+            <a href="#manage-categories" class="button">إدارة التخصصات</a>
+            <a href="#site-analytics" class="button">إحصائيات الموقع</a>
+        </section>
+
+        <section id="pending-articles" class="admin-panel">
+            <h2>المقالات قيد المراجعة</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>العنوان</th>
+                        <th>المؤلف</th>
+                        <th>التخصص</th>
+                        <th>تاريخ الإرسال</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>تقرير حالة عن حالة عصبية نادرة</td>
+                        <td>د. محمد خالد</td>
+                        <td>تقارير الحالات</td>
+                        <td>2024-05-20</td>
+                        <td><a href="article-detail.html?id=x&review=true" target="_blank">عرض</a> | <a href="#">موافقة</a> | <a href="#">رفض</a></td>
+                    </tr>
+                    <tr>
+                        <td>التطورات في علاج الصرع</td>
+                        <td>د. ليلى عمر</td>
+                        <td>الصرع</td>
+                        <td>2024-05-22</td>
+                        <td><a href="article-detail.html?id=y&review=true" target="_blank">عرض</a> | <a href="#">موافقة</a> | <a href="#">رفض</a></td>
+                    </tr>
+                    <!-- تُضاف ديناميكيًا -->
+                </tbody>
+            </table>
+            <p><em>لا توجد مقالات قيد المراجعة حاليًا.</em></p> <!-- تظهر إذا كان الجدول فارغًا -->
+        </section>
+
+        <section id="manage-users" style="margin-top:30px;" class="admin-panel">
+            <h2>إدارة المستخدمين</h2>
+            <!-- بحث/تصفية المستخدمين -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>البريد الإلكتروني</th>
+                        <th>الدور</th>
+                        <th>تاريخ الانضمام</th>
+                        <th>الحالة</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>د. سارة أحمد</td>
+                        <td>sarah.ahmed@example.com</td>
+                        <td>مؤلف</td>
+                        <td>2024-01-10</td>
+                        <td>نشط</td>
+                        <td><a href="#">تعديل الدور</a> | <a href="#">تعليق</a> | <a href="#">حذف</a></td>
+                    </tr>
+                     <tr>
+                        <td>د. محمد خالد</td>
+                        <td>mohamed.khaled@example.com</td>
+                        <td>طبيب</td>
+                        <td>2024-05-15</td>
+                        <td>نشط</td>
+                        <td><a href="#">تعديل الدور</a> | <a href="#">تعليق</a> | <a href="#">حذف</a></td>
+                    </tr>
+                    <!-- تُضاف ديناميكيًا -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="manage-categories" style="margin-top:30px;" class="admin-panel">
+            <h2>إدارة التخصصات الفرعية/التصنيفات</h2>
+            <form id="add-category-form" style="margin-bottom:15px;">
+                <label for="new-category-name">اسم التخصص الجديد:</label>
+                <input type="text" id="new-category-name" name="category_name" required>
+                <button type="submit">إضافة تخصص</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>اسم التخصص</th>
+                        <th>عدد المقالات</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>أمراض الأوعية الدموية العصبية</td>
+                        <td>15</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>الصرع</td>
+                        <td>12</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>الفيزيولوجيا العصبية السريرية</td>
+                        <td>8</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>العناية المركزة العصبية</td>
+                        <td>10</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>أمراض المناعة العصبية</td>
+                        <td>7</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>التصلب المتعدد</td>
+                        <td>14</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>اضطرابات الحركة</td>
+                        <td>9</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>طب الأعصاب والعضلات</td>
+                        <td>6</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>علم الأعصاب السلوكي</td>
+                        <td>5</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>الطب النفسي العصبي</td>
+                        <td>4</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>طب الصداع</td>
+                        <td>11</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <tr>
+                        <td>علم الأورام العصبية</td>
+                        <td>3</td>
+                        <td><button>تعديل</button> <button>حذف</button></td>
+                    </tr>
+                    <!-- تُضاف ديناميكيًا -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="site-analytics" style="margin-top:30px;" class="admin-panel">
+            <h2>نظرة عامة على إحصائيات الموقع</h2>
+            <p>إجمالي المستخدمين: <strong>150</strong></p>
+            <p>إجمالي المقالات المنشورة: <strong>75</strong></p>
+            <p>إجمالي مشاهدات المقالات (آخر 30 يومًا): <strong>12,345</strong></p>
+            <!-- إحصائيات أكثر تفصيلاً، ربما مع رسوم بيانية -->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>NeuroLearn Hub © 2024. لأغراض تعليمية فقط.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

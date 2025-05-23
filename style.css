@@ -1,0 +1,399 @@
+/* 
+* NeuroLearn Hub - تطبيق تعليمي لعلم الأعصاب
+* نمط CSS الأساسي
+* تصميم مشابه لتطبيق UpToDate الطبي
+*/
+
+/* إعادة ضبط أساسية ونمط الجسم */
+body, h1, h2, h3, p, ul, li, form, input, button, select, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding-bottom: 60px; /* للتذييل الثابت */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* الرأس والتنقل */
+header {
+    background: #fff;
+    color: #333;
+    padding-top: 15px;
+    min-height: 70px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .current a {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+/* منطقة المحتوى الرئيسية */
+main {
+    padding: 20px;
+    background: #fff;
+    min-height: 400px; /* ضمان دفع التذييل للأسفل */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* التذييل */
+footer {
+    background: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* النماذج */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button, .button {
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover, .button:hover {
+    background: #0056b3;
+}
+
+/* نمط المقالات */
+.article-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.article-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.article-card h3 a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 1.3em;
+}
+
+.article-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.article-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* مساعد إمكانية الوصول */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* تصميم متجاوب */
+@media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header nav ul {
+        padding-top: 10px;
+    }
+    .container {
+        width: 95%;
+    }
+    footer {
+        position: relative; /* السماح للمحتوى بدفعه للأسفل */
+    }
+}
+
+/* نمط الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: right;
+}
+th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* نمط UpToDate - قائمة التخصصات */
+.specialty-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.specialty-item {
+    background: #f5f7fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(33.333% - 15px);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.specialty-item:hover {
+    background: #e8f0fe;
+    border-color: #0066cc;
+}
+
+.specialty-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: block;
+}
+
+/* نمط البحث الرئيسي */
+.search-container {
+    background: #f5f7fa;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-form input[type="search"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.search-form button {
+    border-radius: 0 4px 4px 0;
+    padding: 12px 20px;
+}
+
+/* نمط صفحة تفاصيل المقالة */
+.article-content {
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.article-content h2 {
+    margin: 25px 0 15px;
+    color: #0066cc;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+.article-content ul, .article-content ol {
+    margin: 20px 0;
+    padding-right: 20px;
+}
+
+.article-content figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.article-content figure img {
+    max-width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.article-content figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* نمط قسم المراجع */
+.references {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.references h2 {
+    color: #333;
+}
+
+.references ol {
+    padding-right: 20px;
+}
+
+.references li {
+    margin-bottom: 10px;
+}
+
+/* نمط لوحة المشرف */
+.admin-panel {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.admin-panel h2 {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* نمط الاشتراك */
+.subscription-box {
+    background: #f5f7fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subscription-box h3 {
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+/* نمط التنبيهات */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اشترك في منصة NeuroLearn Hub.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>اشتراك | NeuroLearn Hub</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><a href="index.html"><img src="images/logo.png" alt="شعار NeuroLearn Hub" style="height:40px; vertical-align:middle; margin-left:10px;">NeuroLearn Hub</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="articles.html">المقالات</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li class="current"><a href="register.html">اشتراك</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="register-form-section" style="max-width: 500px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h1>إنشاء حساب جديد</h1>
+            <p>انضم إلى مجتمع أطباء الأعصاب لدينا.</p>
+            <form id="registration-form" action="/api/register" method="POST"> <!-- سيشير الإجراء إلى نقطة نهاية الباك إند -->
+                <div class="form-group">
+                    <label for="reg-fullname">الاسم الكامل:</label>
+                    <input type="text" id="reg-fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">البريد الإلكتروني:</label>
+                    <input type="email" id="reg-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">كلمة المرور:</label>
+                    <input type="password" id="reg-password" name="password" required minlength="8">
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">تأكيد كلمة المرور:</label>
+                    <input type="password" id="reg-confirm-password" name="confirm_password" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-role">أنا:</label>
+                    <select id="reg-role" name="role" required>
+                        <option value="">اختر الدور...</option>
+                        <option value="doctor">طبيب أعصاب</option>
+                        <option value="resident">طبيب مقيم في الأعصاب</option>
+                        <option value="author">مؤلف/مساهم</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reg-specialty">التخصص الفرعي الرئيسي في علم الأعصاب:</label>
+                    <select id="reg-specialty" name="specialty">
+                        <option value="">لا يوجد</option>
+                        <option value="vascular-neurology">أمراض الأوعية الدموية العصبية</option>
+                        <option value="epilepsy">الصرع</option>
+                        <option value="clinical-neurophysiology">الفيزيولوجيا العصبية السريرية</option>
+                        <option value="neurocritical-care">العناية المركزة العصبية</option>
+                        <option value="neuroimmunology">أمراض المناعة العصبية</option>
+                        <option value="multiple-sclerosis">التصلب المتعدد</option>
+                        <option value="movement-disorders">اضطرابات الحركة</option>
+                        <option value="neuromuscular-medicine">طب الأعصاب والعضلات</option>
+                        <option value="behavioral-neurology">علم الأعصاب السلوكي</option>
+                        <option value="neuropsychiatry">الطب النفسي العصبي</option>
+                        <option value="headache-medicine">طب الصداع</option>
+                        <option value="neuro-oncology">علم الأورام العصبية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="reg-terms" name="terms" required style="width:auto; margin-left: 5px;">
+                    <label for="reg-terms" style="display:inline;">أوافق على <a href="terms.html">الشروط والأحكام</a>.</label>
+                </div>
+                <button type="submit">اشتراك</button>
+            </form>
+            <p style="margin-top:15px;">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول من هنا</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>NeuroLearn Hub © 2024. لأغراض تعليمية فقط.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

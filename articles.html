@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تصفح مقالات علم الأعصاب حسب التخصص أو الكلمة المفتاحية أو المؤلف.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>المقالات | NeuroLearn Hub</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><a href="index.html"><img src="images/logo.png" alt="شعار NeuroLearn Hub" style="height:40px; vertical-align:middle; margin-left:10px;">NeuroLearn Hub</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="current"><a href="articles.html">المقالات</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">اشتراك</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="page-title" style="text-align:center; margin-bottom:20px;">
+            <!-- سيتغير العنوان بناءً على البحث/التصفية، مثل "مقالات عن السكتة الدماغية" أو "نتائج البحث عن 'الصداع'" -->
+            <h1>جميع المقالات</h1>
+        </section>
+
+        <aside id="filters" style="float:right; width:25%; padding-left:20px; margin-bottom:20px;">
+            <h2>تصفية المقالات</h2>
+            <form id="filter-form">
+                <div class="form-group">
+                    <label for="filter-keyword">الكلمة المفتاحية:</label>
+                    <input type="text" id="filter-keyword" name="keyword" placeholder="مثال: صداع، تخطيط كهربية الدماغ">
+                </div>
+                <div class="form-group">
+                    <label for="filter-category">التخصص الفرعي:</label>
+                    <select id="filter-category" name="category">
+                        <option value="">جميع التخصصات</option>
+                        <option value="vascular-neurology">أمراض الأوعية الدموية العصبية</option>
+                        <option value="epilepsy">الصرع</option>
+                        <option value="clinical-neurophysiology">الفيزيولوجيا العصبية السريرية</option>
+                        <option value="neurocritical-care">العناية المركزة العصبية</option>
+                        <option value="neuroimmunology">أمراض المناعة العصبية</option>
+                        <option value="multiple-sclerosis">التصلب المتعدد</option>
+                        <option value="movement-disorders">اضطرابات الحركة</option>
+                        <option value="neuromuscular-medicine">طب الأعصاب والعضلات</option>
+                        <option value="behavioral-neurology">علم الأعصاب السلوكي</option>
+                        <option value="neuropsychiatry">الطب النفسي العصبي</option>
+                        <option value="headache-medicine">طب الصداع</option>
+                        <option value="neuro-oncology">علم الأورام العصبية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filter-author">المؤلف:</label>
+                    <input type="text" id="filter-author" name="author" placeholder="مثال: د. أحمد">
+                </div>
+                <div class="form-group">
+                    <label for="filter-date-from">من تاريخ:</label>
+                    <input type="date" id="filter-date-from" name="date_from">
+                </div>
+                <div class="form-group">
+                    <label for="filter-date-to">إلى تاريخ:</label>
+                    <input type="date" id="filter-date-to" name="date_to">
+                </div>
+                <button type="submit">تطبيق التصفية</button>
+            </form>
+        </aside>
+
+        <section id="article-list" style="float:left; width:70%;">
+            <h2>نتائج المقالات</h2>
+            <!-- سيتم تعبئة هذه القائمة ديناميكيًا بواسطة الباك إند/جافا سكريبت -->
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=1">فهم السكتة الدماغية الإقفارية: مراجعة شاملة</a></h3>
+                <p class="article-meta">بواسطة د. سارة أحمد | تاريخ النشر: 2024-05-20 | التخصص: أمراض الأوعية الدموية العصبية</p>
+                <p>ملخص موجز لمحتوى المقالة، يناقش أسباب وتشخيص وعلاج السكتة الدماغية الإقفارية...</p>
+                <a href="article-detail.html?id=1" class="button">قراءة المزيد</a>
+                <button class="bookmark-button" aria-label="حفظ هذه المقالة" style="margin-right:10px;">🔖</button>
+            </div>
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=2">العلاجات الجديدة في التصلب المتعدد</a></h3>
+                <p class="article-meta">بواسطة د. محمد خالد | تاريخ النشر: 2024-05-19 | التخصص: التصلب المتعدد</p>
+                <p>استكشاف أحدث التطورات في الخيارات العلاجية للمرضى المصابين بالتصلب المتعدد...</p>
+                <a href="article-detail.html?id=2" class="button">قراءة المزيد</a>
+                <button class="bookmark-button" aria-label="حفظ هذه المقالة" style="margin-right:10px;">🔖</button>
+            </div>
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=3">إدارة حالة الصرع المستمرة</a></h3>
+                <p class="article-meta">بواسطة د. ليلى عمر | تاريخ النشر: 2024-05-18 | التخصص: الصرع</p>
+                <p>إرشادات وبروتوكولات للإدارة العاجلة لحالة الصرع المستمرة لدى البالغين والأطفال...</p>
+                <a href="article-detail.html?id=3" class="button">قراءة المزيد</a>
+                <button class="bookmark-button" aria-label="حفظ هذه المقالة" style="margin-right:10px;">🔖</button>
+            </div>
+            <div class="article-card">
+                <h3><a href="article-detail.html?id=4">تقنيات تخطيط كهربية الدماغ الحديثة</a></h3>
+                <p class="article-meta">بواسطة د. عمر حسن | تاريخ النشر: 2024-05-17 | التخصص: الفيزيولوجيا العصبية السريرية</p>
+                <p>نظرة عامة على التقنيات الحديثة في تخطيط كهربية الدماغ وتطبيقاتها السريرية...</p>
+                <a href="article-detail.html?id=4" class="button">قراءة المزيد</a>
+                <button class="bookmark-button" aria-label="حفظ هذه المقالة" style="margin-right:10px;">🔖</button>
+            </div>
+
+            <!-- ترقيم الصفحات (مثال) -->
+            <nav aria-label="تنقل المقالات" style="margin-top:20px; text-align:center;">
+                <ul class="pagination" style="list-style:none; padding:0; display:inline-block;">
+                    <li style="display:inline; margin-left:5px;"><a href="#">« السابق</a></li>
+                    <li style="display:inline; margin-left:5px;"><a href="#">1</a></li>
+                    <li style="display:inline; margin-left:5px; font-weight:bold;"><a href="#">2</a></li>
+                    <li style="display:inline; margin-left:5px;"><a href="#">3</a></li>
+                    <li style="display:inline;"><a href="#">التالي »</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div style="clear:both;"></div>
+    </main>
+
+    <footer>
+        <p>NeuroLearn Hub © 2024. لأغراض تعليمية فقط.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

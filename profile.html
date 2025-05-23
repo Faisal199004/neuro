@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الملف الشخصي ولوحة تحكم القارئ في NeuroLearn Hub.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ملفي الشخصي | NeuroLearn Hub</title> <!-- ديناميكي: ملف [اسم المستخدم] الشخصي -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><a href="index.html"><img src="images/logo.png" alt="شعار NeuroLearn Hub" style="height:40px; vertical-align:middle; margin-left:10px;">NeuroLearn Hub</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="articles.html">المقالات</a></li>
+                    <li class="current"><a href="profile.html">ملفي الشخصي</a></li>
+                    <!-- إذا كان المستخدم أيضًا مؤلفًا -->
+                    <!-- <li><a href="author-dashboard.html">لوحة تحكم المؤلف</a></li> -->
+                    <li><a href="#">تسجيل الخروج</a></li> <!-- مكان لتسجيل الخروج -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="profile-header">
+            <!-- اسم المستخدم الديناميكي -->
+            <h1>ملف د. سارة أحمد الشخصي</h1>
+            <p>البريد الإلكتروني: sarah.ahmed@example.com</p>
+            <p>الدور: مؤلف</p>
+            <p>التخصص الرئيسي: أمراض الأوعية الدموية العصبية</p>
+            <button class="button">تعديل الملف الشخصي</button>
+        </section>
+
+        <section id="user-activity" style="margin-top:30px;">
+            <h2>نشاطي</h2>
+            
+            <div id="bookmarked-articles" style="margin-bottom:20px;">
+                <h3>المقالات المحفوظة</h3>
+                <ul>
+                    <li><a href="article-detail.html?id=1">فهم السكتة الدماغية الإقفارية</a> - تم الحفظ بتاريخ 2024-05-22</li>
+                    <li><a href="article-detail.html?id=5">التطورات الحديثة في مرض باركنسون</a> - تم الحفظ بتاريخ 2024-05-21</li>
+                </ul>
+                <p><em>لا توجد مقالات محفوظة حتى الآن.</em></p> <!-- تظهر إذا كانت فارغة -->
+            </div>
+
+            <div id="recently-viewed" style="margin-bottom:20px;">
+                <h3>تمت مشاهدتها مؤخرًا</h3>
+                 <ul>
+                    <li><a href="article-detail.html?id=2">العلاجات الجديدة في التصلب المتعدد</a> - تمت المشاهدة بتاريخ 2024-05-23</li>
+                    <li><a href="article-detail.html?id=3">إدارة حالة الصرع المستمرة</a> - تمت المشاهدة بتاريخ 2024-05-23</li>
+                </ul>
+                 <p><em>لا توجد مقالات تمت مشاهدتها مؤخرًا.</em></p> <!-- تظهر إذا كانت فارغة -->
+            </div>
+
+            <!-- إذا كان المستخدم مؤلفًا، قد يرى مقالاته المنشورة هنا، أو رابطًا إلى لوحة تحكم المؤلف -->
+            <!-- 
+            <div id="my-published-articles">
+                <h3>مقالاتي المنشورة</h3>
+                <ul>
+                    <li><a href="article-detail.html?id=1">فهم السكتة الدماغية الإقفارية</a> (منشورة)</li>
+                </ul>
+                <a href="author-dashboard.html" class="button">الذهاب إلى لوحة تحكم المؤلف</a>
+            </div>
+            -->
+        </section>
+    </main>
+
+    <footer>
+        <p>NeuroLearn Hub © 2024. لأغراض تعليمية فقط.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
